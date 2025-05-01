@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Courses Offered</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background-color: #f4f4f4;
+      padding: 20px;
+    }
+
+    .main-container {
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .title-box, .highlighted-box, .course-box {
+      background-color: #fff;
+      border-radius: 12px;
+      padding: 20px 30px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .title-box {
+      background-color: #1897d6;
+      color: white;
+      text-align: center;
+    }
+
+    .title-box h1 {
+      margin: 0;
+      font-size: 26px;
+      background-color: #781c4d;
+      color: white;
+      font-size: 18px;
+      border-top-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+    }
+
+    .title-box p {
+      font-size: 18px;
+      margin: 5px 0;
+    }
+
+    .highlighted-box .header,
+    .course-box .header {
+      background-color: #781c4d;
+      color: white;
+      padding: 10px 20px;
+      font-size: 18px;
+      font-weight: bold;
+      border-radius: 0 25px 0 0;
+      width: fit-content;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+    }
+
+    .highlighted-box .course-list p,
+    .course-box .section .course-line {
+      font-size: 16px;
+      color: #333;
+      margin: 8px 0;
+    }
+
+    .highlighted-box .course-list p::before,
+    .course-box .section-title::before {
+      content: "\25B6";
+      color: #0a84ff;
+      margin-right: 8px;
+    }
+
+    .duration {
+      color: #c0392b;
+      font-weight: bold;
+    }
+
+    .section {
+      margin-top: 20px;
+    }
+
+    .section-title {
+      font-size: 17px;
+      color: #781c4d;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    .bold {
+      font-weight: bold;
+    }
+
+    @media (max-width: 768px) {
+      .title-box h1 {
+        font-size: 22px;
+      }
+
+      .highlighted-box, .course-box {
+        padding: 15px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="main-container">
+
+    <div class="title-box">
+      <h1>COURSES OFFERED</h1>
+      <p>WEST BENGAL STATE COUNCIL AND VOCATIONAL EDUCATION</p>
+      <p>AND SKILL DEVELOPMENT</p>
+      <p>Department of Technical Education, Govt. of West Bengal</p>
+    </div>
+
+    <div class="highlighted-box">
+      <div class="header">Highlighted Courses</div>
+      <div class="course-list">
+        <p><a href="#">B.C.A</a> <span class="duration">(Three Year)</span></p>
+        <p><a href="#">M.B.A</a> <span class="duration">(Three Year)</span></p>
+        <p><a href="#">B.B.A</a> <span class="duration">(Two Year)</span></p>
+        <p><a href="#">B.M.L.T</a> <span class="duration">(One Year)</span></p>
+        <p><a href="#">D.M.L.T</a> <span class="duration">(One Year)</span></p>
+        <p><a href="#">Diploma In Yoga</a> <span class="duration">(One Year)</span></p>
+        <p><a href="#">B.Sc Hons (Agriculture)</a> <span class="duration">(One Year)</span></p>
+      </div>
+    </div>
+
+    <div class="course-box">
+      <div class="header">UGC, AICTE and Paramedical Council Approved UG & PG Courses</div>
+
+      <div class="section">
+        <div class="section-title">Engineering & Technology</div>
+        <p class="course-line"><span class="bold">B.E. :</span> CS | EC | ME | Civil | EEE</p>
+        <p class="course-line"><span class="bold">M.Tech. :</span> Production, Thermal, VLSI, CSE, Wireless & Mobile Communication, Power Systems, Civil</p>
+        <p class="course-line"><span class="bold">Diploma :</span> Civil, Mechanical, Electrical & Electronics</p>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Management</div>
+        <p class="course-line">MBA | BBA | M.Phil. (Management)</p>
+        <p class="course-line"><span class="bold">PG Diploma :</span> Urban, Rural, Agri Business Management</p>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Arts</div>
+        <p class="course-line">B.A Hons | M.A. in Hindi, English, History, Political Science, Economics, Sociology</p>
+        <p class="course-line">MSW | B.Lib | M.Lib | M.Phil (Selective Branch)</p>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Education</div>
+        <p class="course-line">B.Ed | B.P.Ed | M.Ed | M.Phil</p>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Computer Science & IT</div>
+        <p class="course-line">DCA | PGDCA | BCA | B.Sc (IT/CS) | M.Sc (IT/CS) | M.Phil (IT/CS)</p>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Law</div>
+        <p class="course-line">B.A | LL.B | LL.M</p>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Commerce</div>
+        <p class="course-line">B.Com (Plain, Taxation Hons.) | M.Com (Taxation, Management)</p>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Mass Communication</div>
+        <p class="course-line">BJMC | MJMC (Mass Communication and Journalism)</p>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Paramedical Science</div>
+        <p class="course-line">Diploma/PG Diploma/M.Sc in Yoga, MPT, BPT, BMLT, DMLT, Dialysis Tech, Cath Lab Tech</p>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Nursing</div>
+        <p class="course-line">B.Sc (Nursing) | GNM</p>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Agriculture</div>
+        <p class="course-line">B.Sc Hons (Agri) | M.Sc Hons (Agri)</p>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Science</div>
+        <p class="course-line">Physics, Chemistry, Mathematics, Biology, Botany, Zoology, Electronics - B.Sc/M.Sc/M.Phil</p>
+      </div>
+
+    </div>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Page</title>
+ 
+    <header><B>LIBRARY</B></header>
+    <div class="container">
+        <div class="section">
+            <h2>About the Library</h2>
+            <p>The Nathaniyal Murmu Memorial College library, established on February 22nd, 2011, stands as a vital resource hub within the institution. Boosting a collection of around 8500 books spanning various disciplines, it serves as a cornerstone of academic exploration and intellectual growth. Equipped with two computers with internet facilities, the library embraces modern technology to complement its traditional print resources. Students have access to a wealth of online databases, e-books, and multimedia resources, enriching their research endeavours and expanding their horizons. The reading room provides a serene environment for study and contemplation, fostering a culture of focused learning amidst the hustle and bustle of campus life. Here, students can delve into their studies or lose themselves in the pages of a captivating book, away from distractions.
+
+                Beyond its physical and digital collections, the library serves as a hub for collaborative learning and intellectual exchange. Students gather for group discussions, study sessions, and workshops, enhancing their understanding of course materials and fostering a sense of camaraderie among peers. The dedicated staff members play a pivotal role in maintaining the library's operations and assisting patrons in their quest for knowledge. Their expertise and guidance ensure that students make the most of the library's resources and develop essential research skills for academic success.
+                
+                In essence, the Nathaniyal Murmu Memorial College library is more than just a repository of books; it is a gateway to knowledge, a catalyst for intellectual curiosity, and a nurturing environment for academic excellence. It embodies the college's commitment to fostering a culture of learning and innovation, empowering students to achieve their academic and personal aspirations.</p>
+        </div>
+
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #eff309;
+        }
+        header {
+            background-color: #000000;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 34px;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        .section {
+            background: rgb(118, 214, 109);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #000000;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            background: #ecf0f1;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="gallery" class="slideshow-container">
+        <div class="mySlides fade">
+          <img src="b5.jpg" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+          <img src="b7.jpg" style="width:100%">
+        </div>
+      </div>
+      
+      <style>
+      .slideshow-container {
+        max-width: 900px;
+        height: 60%;
+        margin: 30px auto;
+        position: relative;
+        border: 5px solid #fff;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+      }
+      .mySlides {
+        display: none;
+      }
+      .mySlides img {
+        width: 100%;
+        height: 350px; /* or your preferred height */
+        object-fit: cover;
+      }
+      .fade {
+        animation: fade 1.5s;
+      }
+      @keyframes fade {
+        from {opacity: 0.4} 
+        to {opacity: 1}
+      }
+      </style>
+      
+      <script>
+      let slideIndex = 0;
+      showSlides();
+      function showSlides() {
+        const slides = document.getElementsByClassName("mySlides");
+        for (let i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) { slideIndex = 1 }    
+        slides[slideIndex - 1].style.display = "block";  
+        setTimeout(showSlides, 3000); // Change every 3 seconds
+      }
+      </script>
+    
+        <div class="section">
+            <h2>Library Rules</h2>
+            <ul>
+                <li>Maintain silence at all times.</li>
+                <li>Return books within the due date.</li>
+                <li>No food or drinks allowed inside.</li>
+                <li>Handle books with care.</li>
+                <li>Respect other readers.</li>
+            </ul>
+        </div>
+        <div class="section">
+            <h2>Library Book List</h2>
+            <ul>
+                <li>The Great Gatsby - F. Scott Fitzgerald</li>
+                <li>To Kill a Mockingbird - Harper Lee</li>
+                <li>1984 - George Orwell</li>
+                <li>Pride and Prejudice - Jane Austen</li>
+                <li>Moby-Dick - Herman Melville</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
