@@ -66,13 +66,26 @@
             align-items: center;
         }
 
-        .contact-form input, .contact-form textarea {
+        .contact-form input  {
             width: 80%;
+            height: 40px;
             margin: 10px 0;
             padding: 10px;
-            border: 1px solid #ccc;
+            border: 2px solid #9dd812;
             border-radius: 5px;
         }
+
+        .contact-form textarea {
+            width: 80%;
+            height: 120px; /* Increased height */
+            margin: 10px 0;
+            padding: 10px;
+            border: 2px solid #9dd812;
+            border-radius: 5px;
+            resize: vertical; /* Optional: allows user to resize */
+        }
+
+      
 
         .contact-form button {
             background-color: #ff6600;
@@ -146,7 +159,11 @@
     <section class="contact-form">
         <h2>Get In Touch</h2>
         <p>Have any queries? Feel free to contact us.</p>
-        <form>
+        <form action="https://api.web3forms.com/submit" method="POST">
+
+  <!----------------web 3 page gmail api key                 36c14bcb-62a0-4abd-89b6-500c44f036c5 ------------------------------------------->
+
+            <input type="hidden" name="access_key" value="36c14bcb-62a0-4abd-89b6-500c44f036c5">
             <input type="text" name="name" placeholder="Name" required>
             <input type="email" name="email" placeholder="Email" required>
             <input type="text" name="phone" placeholder="Phone" required>
@@ -170,6 +187,37 @@
             <p>datapro@001.com</p>
         </div>
     </section>
+
+    
+    <script>
+    document.querySelector("form").addEventListener("submit", function (e) {
+        const name = document.querySelector('input[name="name"]').value.trim();
+        const email = document.querySelector('input[name="email"]').value.trim();
+        const phone = document.querySelector('input[name="phone"]').value.trim();
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const phoneRegex = /^[0-9]{10}$/;
+
+        let errorMessage = "";
+
+        if (name.length < 2) {
+            errorMessage += "Please enter a valid name (at least 2 characters).\n";
+        }
+
+        if (!emailRegex.test(email)) {
+            errorMessage += "Please enter a valid email address.\n";
+        }
+
+        if (!phoneRegex.test(phone)) {
+            errorMessage += "Please enter a valid 10-digit phone number.\n";
+        }
+
+        if (errorMessage) {
+            e.preventDefault(); // prevent form submission
+            alert(errorMessage);
+        }
+    });
+</script>
+
 
 </body>
 </html>
