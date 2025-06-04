@@ -5,6 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
     <style>
+        :root {
+            /* Light theme variables */
+            --bg-color: #f4f4f4;
+            --text-color: #333;
+            --card-bg: #d66161;
+            --form-bg: rgb(158, 71, 71);
+            --header-bg: #002147;
+            --footer-bg: #002147;
+            --input-border: #9dd812;
+            --button-bg: #ff6600;
+            --button-hover: #e65c00;
+            --button-size: 10px;
+            --card-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        [data-theme="dark"] {
+            /* Dark theme variables */
+            --bg-color: #1a1a1a;
+            --text-color: #f4f4f4;
+            --card-bg: #8b3a3a;
+            --form-bg: rgb(100, 45, 45);
+            --header-bg: #001030;
+            --footer-bg: #001030;
+            --input-border: #7ab317;
+            --button-bg: #cc5200;
+            --button-hover: #b34700;
+            --card-shadow: 0 2px 5px rgba(0,0,0,0.3);
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -13,17 +42,84 @@
         }
 
         body {
-            background-color: #f4f4f4;
+            background-color: var(--bg-color);
+            color: var(--text-color);
             text-align: center;
+            transition: all 0.3s ease;
         }
 
         /* Contact Heading */
         .contact-heading {
-            background-color: #002147;
+            background-color: var(--header-bg);
             color: white;
-            padding: 20px;
+            padding: 15px 20px;
             font-size: 24px;
             font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .contact-heading h1 {
+            font-size: clamp(20px, 5vw, 24px);
+        }
+
+        /* Toggle Switch */
+        .theme-toggle {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .theme-toggle span {
+            font-size: clamp(14px, 3vw, 16px);
+        }
+
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: clamp(40px, 8vw, 50px);
+            height: clamp(24px, 5vw, 28px);
+        }
+
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: 0.4s;
+            border-radius: 34px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: clamp(16px, 4vw, 20px);
+            width: clamp(16px, 4vw, 20px);
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: 0.4s;
+            border-radius: 50%;
+        }
+
+        input:checked + .slider {
+            background-color: #2196F3;
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(clamp(16px, 4vw, 22px));
         }
 
         /* Card Section */
@@ -31,33 +127,35 @@
             display: flex;
             justify-content: center;
             gap: 20px;
-            padding: 30px;
+            padding: 20px;
             flex-wrap: wrap;
         }
 
         .card {
-            background-color: #d66161;
-            padding: 20px;
+            background-color: var(--card-bg);
+            padding: 15px;
             text-align: center;
-            width: 300px;
+            width: clamp(250px, 90%, 300px);
             border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            box-shadow: var(--card-shadow);
+            color: white;
         }
 
         /* Contact Form */
         .contact-form {
             text-align: center;
-            padding: 30px;
-            background: rgb(158, 71, 71);
-            margin: 20px;
+            padding: 20px;
+            background: var(--form-bg);
+            margin: 20px auto;
             border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            width: 80%;
-            margin: auto;
+            box-shadow: var(--card-shadow);
+            width: clamp(300px, 90%, 800px);
+            color: white;
         }
 
         .contact-form h2 {
             margin-bottom: 15px;
+            font-size: clamp(18px, 4vw, 22px);
         }
 
         .contact-form form {
@@ -66,39 +164,44 @@
             align-items: center;
         }
 
-        .contact-form input  {
-            width: 80%;
+        .contact-form input {
+            width: 90%;
             height: 40px;
-            margin: 10px 0;
+            margin: 8px 0;
             padding: 10px;
-            border: 2px solid #9dd812;
+            border: 2px solid var(--input-border);
             border-radius: 5px;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-size: clamp(14px, 3vw, 16px);
         }
 
         .contact-form textarea {
-            width: 80%;
-            height: 120px; /* Increased height */
-            margin: 10px 0;
+            width: 90%;
+            height: 120px;
+            margin: 8px 0;
             padding: 10px;
-            border: 2px solid #9dd812;
+            border: 2px solid var(--input-border);
             border-radius: 5px;
-            resize: vertical; /* Optional: allows user to resize */
+            resize: vertical;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-size: clamp(14px, 3vw, 16px);
         }
 
-      
-
         .contact-form button {
-            background-color: #ff6600;
+            background-color: var(--button-bg);
             color: white;
             padding: 10px 20px;
             border: none;
             cursor: pointer;
             margin-top: 10px;
             border-radius: 10px;
+            font-size: clamp(14px, 3vw, 16px);
         }
 
         .contact-form button:hover {
-            background-color: #e65c00;
+            background-color: var(--button-hover);
             transform: scale(1.05);
             box-shadow: 10px 6px 12px rgba(255, 255, 255, 0.3);
         }
@@ -109,7 +212,7 @@
             justify-content: center;
             gap: 20px;
             flex-wrap: wrap;
-            background-color: #002147;
+            background-color: var(--footer-bg);
             color: white;
             padding: 20px;
             margin-top: 20px;
@@ -118,14 +221,15 @@
         .footer-box {
             padding: 10px;
             text-align: center;
-            width: 30%;
+            width: clamp(200px, 30%, 300px);
         }
 
         .footer-box h3 {
             margin-bottom: 5px;
+            font-size: clamp(16px, 3.5vw, 18px);
         }
 
-        /* Responsive Design */
+           /* Responsive Design */
         @media (max-width: 768px) {
             .footer-box {
                 width: 100%;
@@ -134,9 +238,15 @@
     </style>
 </head>
 <body>
-
     <div class="contact-heading">
         <h1>Contact Us</h1>
+        <div class="theme-toggle">
+            <span>Dark Mode</span>
+            <label class="switch">
+                <input type="checkbox" id="themeToggle">
+                <span class="slider"></span>
+            </label>
+        </div>
     </div>
 
     <!-- Card Section -->
@@ -160,9 +270,6 @@
         <h2>Get In Touch</h2>
         <p>Have any queries? Feel free to contact us.</p>
         <form action="https://api.web3forms.com/submit" method="POST">
-
-  <!----------------web 3 page gmail api key                 36c14bcb-62a0-4abd-89b6-500c44f036c5 ------------------------------------------->
-
             <input type="hidden" name="access_key" value="36c14bcb-62a0-4abd-89b6-500c44f036c5">
             <input type="text" name="name" placeholder="Name" required>
             <input type="email" name="email" placeholder="Email" required>
@@ -188,36 +295,54 @@
         </div>
     </section>
 
-    
     <script>
-    document.querySelector("form").addEventListener("submit", function (e) {
-        const name = document.querySelector('input[name="name"]').value.trim();
-        const email = document.querySelector('input[name="email"]').value.trim();
-        const phone = document.querySelector('input[name="phone"]').value.trim();
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        const phoneRegex = /^[0-9]{10}$/;
+        // Theme toggle functionality
+        const themeToggle = document.getElementById('themeToggle');
+        const body = document.body;
 
-        let errorMessage = "";
-
-        if (name.length < 2) {
-            errorMessage += "Please enter a valid name (at least 2 characters).\n";
+        // Check for saved theme preference
+        if (localStorage.getItem('theme') === 'dark') {
+            body.setAttribute('data-theme', 'dark');
+            themeToggle.checked = true;
         }
 
-        if (!emailRegex.test(email)) {
-            errorMessage += "Please enter a valid email address.\n";
-        }
+        themeToggle.addEventListener('change', () => {
+            if (themeToggle.checked) {
+                body.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                body.removeAttribute('data-theme');
+                localStorage.setItem('theme', 'light');
+            }
+        });
 
-        if (!phoneRegex.test(phone)) {
-            errorMessage += "Please enter a valid 10-digit phone number.\n";
-        }
+        // Existing form validation
+        document.querySelector("form").addEventListener("submit", function (e) {
+            const name = document.querySelector('input[name="name"]').value.trim();
+            const email = document.querySelector('input[name="email"]').value.trim();
+            const phone = document.querySelector('input[name="phone"]').value.trim();
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            const phoneRegex = /^[0-9]{10}$/;
 
-        if (errorMessage) {
-            e.preventDefault(); // prevent form submission
-            alert(errorMessage);
-        }
-    });
-</script>
+            let errorMessage = "";
 
+            if (name.length < 2) {
+                errorMessage += "Please enter a valid name (at least 2 characters).\n";
+            }
 
+            if (!emailRegex.test(email)) {
+                errorMessage += "Please enter a valid email address.\n";
+            }
+
+            if (!phoneRegex.test(phone)) {
+                errorMessage += "Please enter a valid 10-digit phone number.\n";
+            }
+
+            if (errorMessage) {
+                e.preventDefault();
+                alert(errorMessage);
+            }
+        });
+    </script>
 </body>
 </html>
