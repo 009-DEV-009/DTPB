@@ -124,7 +124,7 @@
       box-shadow: 0 6px 15px rgba(0,0,0,0.1);
       position: relative;
       overflow: hidden;
-      width: 200px;
+      width: 165px;
     }
 
     .btn::before {
@@ -222,7 +222,7 @@
     }
 
     .D1 .b {
-      color: #22f706;
+      color: #f70606;
       animation: blink-opacity 1.5s infinite;
     }
 
@@ -254,6 +254,7 @@
       color: #000000;
       margin-bottom: 20px;
       font-weight: bold;
+      font-size: 35px;
     }
 
     .about-image-centered img {
@@ -273,6 +274,129 @@
       font-weight: bold;
     }
 
+    /* Our Award And Achivements */
+     body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #ebebeb;
+      overflow-x: hidden;
+    }
+
+    .awards-section {
+      text-align: center;
+      padding: 50px 15px;
+      position: relative;
+    }
+
+    .awards-section h2 {
+      font-size: 50px;
+      font-weight: bold;
+      margin-bottom: 30px;
+    }
+
+    .carousel-wrapper {
+      max-width: 1300px;
+      max-height: 650px;
+      margin: 0 auto;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .carousel-container {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      gap: 20px;
+      padding-bottom: 10px;
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .carousel-container::-webkit-scrollbar {
+      display: none;
+    }
+
+    .award-card {
+      flex: 0 0 calc(33.33% - 20px);
+      scroll-snap-align: center;
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.3s;
+      height: 300px;
+      width: 200px;
+    }
+
+    .award-card img {
+      width: 150px;
+      height: 150px;
+      margin-bottom: 10px;
+      margin-top: 20px;
+    }
+
+    .award-card p {
+      font-size: 14px;
+      line-height: 1.4em;
+      margin-top: 25px;
+      color: #000000;
+      padding: 0 10px;
+    }
+
+    /* Navigation Buttons */
+    .nav-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,0.6);
+      color: white;
+      border: none;
+      font-size: 30px;
+      padding: 10px 15px;
+      cursor: pointer;
+      z-index: 10;
+      transition: background 0.3s ease;
+    }
+
+    .nav-btn:hover {
+      background: rgba(0,0,0,0.8);
+    }
+
+    .nav-left {
+      left: 10px;
+    }
+
+    .nav-right {
+      right: 10px;
+    }
+
+    /* Tablet: 2 cards visible */
+    @media (max-width: 992px) {
+      .award-card {
+        flex: 0 0 calc(50% - 20px);
+      }
+
+      .nav-btn {
+        display: none;
+      }
+    }
+
+    /* Mobile: 1 card visible */
+    @media (max-width: 576px) {
+      .award-card {
+        flex: 0 0 calc(100% - 20px);
+      }
+
+      .awards-section h2 {
+        font-size: 1.6em;
+        margin-bottom: 20px;
+      }
+
+      .nav-btn {
+        display: none;
+      }
+    }
+
     /* Placement Section */
     .placement-section {
       padding: 40px 20px;
@@ -282,8 +406,8 @@
     .section-title {
       font-weight: bold;
       margin-bottom: 10px;
-      font-size: clamp(24px, 5vw, 40px);
-      color: #333;
+      font-size: clamp(35px, 5vw, 50px);
+      color: #000000;
     }
 
     .section-title::before {
@@ -521,7 +645,7 @@
     }
 
     .box {
-      background: #d6da22;
+      background: #f8e9b8;
       padding: 25px;
       border-radius: 12px;
       box-shadow: 0 6px 15px rgba(0,0,0,0.1);
@@ -778,7 +902,6 @@
       </div>
       <div class="affiliations">
         Affiliated by: WBSCT & VE & SD and CVRU & RNTU <br><br>
-        <b>CONTACT NO:</b> 9474140475
       </div>
     </div>
   </header>
@@ -790,7 +913,7 @@
     <a href="library.html" class="btn"><i class="fa fa-bookmark" aria-hidden="true"></i> Library</a>
     <a href="admission_form.html" class="btn"><i class="fas fa-user-plus"></i> Admission</a>
     <a href="course.html" class="btn"><i class="fas fa-book"></i> Courses</a>
-    <a href="schollership.html" class="btn"><i class="fas fa-user-plus"></i> Scholarship</a>
+    <a href="schollership-about.html" class="btn"><i class="fas fa-user-plus"></i> Scholarship</a>
     <a href="result_form.html" class="btn"><i class="fa fa-balance-scale" aria-hidden="true"></i> Results</a>
     <a href="faculties.html" class="btn"><i class="fa fa-users" aria-hidden="true"></i> Faculties</a>
     <a href="syllabus.html" class="btn"><i class="fas fa-list"></i> Syllabus</a>
@@ -825,7 +948,7 @@
 
   <!-- Announcement -->
   <div class="D1">
-    <p><b class="a">Announcement:--</b> New Placement Programme Starts From <b class="b">96th February</b></p>
+    <p><b class="a"></b> New Placement Programme Starts From <b class="b">96th February</b></p>
   </div>
 
   <!-- About Section -->
@@ -842,6 +965,44 @@
       </p>
     </div>
   </section>
+
+  <!---our award and Achivements--->
+    <div class="awards-section">
+    <h2>AWARDS</h2>
+    
+    <!-- Scroll Buttons -->
+    <button class="nav-btn nav-left" onclick="scrollCarousel(-1)">‹</button>
+    <button class="nav-btn nav-right" onclick="scrollCarousel(1)">›</button>
+
+    <div class="carousel-wrapper">
+      <div class="carousel-container" id="carousel">
+        <div class="award-card">
+          <img src="award1.jpg" alt="Award 1">
+          <p>Leading University of Chhattisgarh Award 2019</p>
+        </div>
+        <div class="award-card">
+          <img src="award1.jpg" alt="Award 2">
+          <p>Auropath Global Award 2019 for best course & curriculum design</p>
+        </div>
+        <div class="award-card">
+          <img src="award2.jpg" alt="Award 3">
+          <p>ASSOCHAM INDIA Excellence in Education, Training & Development Award 2018</p>
+        </div>
+        <div class="award-card">
+          <img src="k8.jpg" alt="Award 4">
+          <p>Education Excellence Award 2018</p>
+        </div>
+        <div class="award-card">
+          <img src="k8.jpg" alt="Award 5">
+          <p>ZEE MP & CG for Valuable Contribution Thank You! Award</p>
+        </div>
+        <div class="award-card">
+          <img src="k8.jpg" alt="Award 6">
+          <p>8th Ranked Emerging Multi-Disciplinary Private University 2022 (East zone)</p>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Placement Section -->
   <section class="placement-section">
@@ -1004,7 +1165,7 @@ Vocational Education and Skill Development</a></li>
 
   <h3>Why Choose Datapro Aisect Balurghat?</h3>
   <ul>
-    <li>ISO Certified & Government Approved</li>
+    <li>ISO Certified </li>
     <li>100% Practical Training & Hands-on Labs</li>
     <li>Affordable Fees & Flexible Batches</li>
     <li>Placement Support for Every Student</li>
@@ -1028,11 +1189,11 @@ Vocational Education and Skill Development</a></li>
 
   <h4>🔗 Explore More:</h4>
   <ul>
-    <li><a href="/courses.html">Course List</a></li>
+    <li><a href="course.html">Course List</a></li>
     <li><a href="/admission.html">Apply for Admission</a></li>
     <li><a href="/placement.html">Placement Assistance</a></li>
-    <li><a href="/about.html">About Datapro Aisect Balurghat</a></li>
-    <li><a href="/contact.html">Contact Our Team</a></li>
+    <li><a href="about us.html">About Datapro Aisect Balurghat</a></li>
+    <li><a href="contactus.html">Contact Our Team</a></li>
   </ul>
 </div>
 
@@ -1066,6 +1227,60 @@ Vocational Education and Skill Development</a></li>
 
     document.addEventListener("DOMContentLoaded", showSlides);
   </script>
+
+
+  <!---Our Achievements And Awards-->
+
+  <script>
+    const carousel = document.getElementById('carousel');
+    const cards = carousel.querySelectorAll('.award-card');
+    let currentIndex = 0;
+    let autoScrollInterval;
+
+    // Mouse scroll with wheel
+    carousel.addEventListener('wheel', (e) => {
+      e.preventDefault();
+      carousel.scrollLeft += e.deltaY;
+      stopAutoScroll();
+    });
+
+    // Auto scroll
+    function startAutoScroll() {
+      autoScrollInterval = setInterval(() => {
+        currentIndex = (currentIndex + 1) % cards.length;
+        const card = cards[currentIndex];
+        carousel.scrollTo({
+          left: card.offsetLeft - 10,
+          behavior: 'smooth'
+        });
+      }, 3000);
+    }
+
+    function stopAutoScroll() {
+      clearInterval(autoScrollInterval);
+    }
+
+    // Resume auto scroll after user stops interacting
+    carousel.addEventListener('scroll', () => {
+      stopAutoScroll();
+      clearTimeout(window.resumeTimeout);
+      window.resumeTimeout = setTimeout(() => {
+        startAutoScroll();
+      }, 500);
+    });
+
+    // Manual scroll by buttons
+    function scrollCarousel(direction) {
+      const cardWidth = cards[0].offsetWidth + 20; // card width + gap
+      carousel.scrollBy({
+        left: direction * cardWidth,
+        behavior: 'smooth'
+      });
+    }
+
+    startAutoScroll();
+  </script>
+
 
   <title>Courses & Training at Datapro Aisect Balurghat | ISO Certified Institute</title>
 <meta name="description" content="Datapro Aisect Balurghat offers certified courses in IT, English, and accounting with 100% practical training and placement assistance. Join us today!">
