@@ -115,8 +115,8 @@
       color: white;
       padding: 12px 25px;
       border: none;
-      border-top-right-radius: 20px;
-      border-bottom-left-radius: 20px;
+      border-top-right-radius: 10px;
+      border-bottom-left-radius: 10px;
       font-size: clamp(14px, 3vw, 16px);
       text-decoration: none;
       cursor: pointer;
@@ -124,6 +124,7 @@
       box-shadow: 0 6px 15px rgba(0,0,0,0.1);
       position: relative;
       overflow: hidden;
+      width: 200px;
     }
 
     .btn::before {
@@ -642,24 +643,26 @@
       .title-box {
         font-size: 16px; /* Smaller font size for mobile */
         padding: 6px 8px;
-        height: 28px;
+        height: 35px;
+        width: 27px;
       }
 
       .slideshow-container {
         margin: 20px 10px;
         height: 200px;
-        width: 400px;
+        max-width: 440px;
       }
 
       .mySlides img {
         height: 200px;
-        width: 400px;
+        max-width: 700px;
       }
 
       .D1 {
         height: auto;
         padding: 15px 10px;
         font-size: 14px;
+        
       }
 
       .logo-grid {
@@ -677,14 +680,15 @@
 
       .about-box p {
         font-size: 14px;
-      }
-
-        .about-box{
-        width: 440px;
+        width: fit-content;
       }
 
       .map-container iframe {
         height: 300px;
+      }
+
+      .about-box{
+        width: 440px;
       }
     }
 
@@ -694,6 +698,53 @@
         font-size: 14px;
       }
     }
+
+    @media (max-width: 768px) {
+    .button-container {
+    justify-content: center;
+    gap: 15px;
+    padding: 10px;
+  }
+
+  .btn {
+    width: 45%; /* 2 buttons per row */
+    font-size: 16px;
+    padding: 14px 20px;
+  }
+}
+
+      #seo-footer {
+    background-color: #f4f4f4;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+  }
+  #seo-footer h2, #seo-footer h3, #seo-footer h4 {
+    color: #1a237e;
+    margin-top: 25px;
+  }
+  #seo-footer ul {
+    margin-left: 20px;
+    list-style-type: disc;
+  }
+  #seo-footer video {
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 8px;
+  }
+  #seo-footer a {
+    color: #0077cc;
+    text-decoration: none;
+  }
+  #seo-footer a:hover {
+    text-decoration: underline;
+  }
+   @media (max-width: 768px) {
+    #seo-footer img {
+      width: 100%;
+    }
+  }
   </style>
 </head>
 <body>
@@ -727,6 +778,7 @@
       </div>
       <div class="affiliations">
         Affiliated by: WBSCT & VE & SD and CVRU & RNTU <br><br>
+        <b>CONTACT NO:</b> 9474140475
       </div>
     </div>
   </header>
@@ -734,15 +786,15 @@
   <!-- Navigation Buttons -->
   <div class="button-container">
     <a href="screen.html" class="btn"><i class="fas fa-home"></i> Home</a>
-    <a href="professor_desk.html" class="btn"><i class="fas fa-superpowers"></i> Professor Desk</a>
-    <a href="course.html" class="btn"><i class="fas fa-book"></i> Courses</a>
-    <a href="syllabus.html" class="btn"><i class="fas fa-list"></i> Syllabus</a>
-    <a href="admission_form.html" class="btn"><i class="fas fa-user-plus"></i> Admission</a>
+    <a href="professor_desk.html" class="btn"><i class="fas fa-superpowers"></i> Prof Desk</a>
     <a href="library.html" class="btn"><i class="fa fa-bookmark" aria-hidden="true"></i> Library</a>
-    <a href="faculties.html" class="btn"><i class="fa fa-users" aria-hidden="true"></i> Faculties</a>
-     <a href="schollership.html" class="btn"><i class="fa fa-child" aria-hidden="true"></i> Scholarship</a>
-    <a href="about us.html" class="btn"><i class="fa fa-info-circle" aria-hidden="true"></i> About Us</a>
+    <a href="admission_form.html" class="btn"><i class="fas fa-user-plus"></i> Admission</a>
+    <a href="course.html" class="btn"><i class="fas fa-book"></i> Courses</a>
+    <a href="schollership-about.html" class="btn"><i class="fas fa-user-plus"></i> Scholarship</a>
     <a href="result_form.html" class="btn"><i class="fa fa-balance-scale" aria-hidden="true"></i> Results</a>
+    <a href="faculties.html" class="btn"><i class="fa fa-users" aria-hidden="true"></i> Faculties</a>
+    <a href="syllabus.html" class="btn"><i class="fas fa-list"></i> Syllabus</a>
+    <a href="about us.html" class="btn"><i class="fa fa-info-circle" aria-hidden="true"></i> About Us</a>
     <a href="NOTICE.html" class="btn"><i class="fa fa-object-group" aria-hidden="true"></i> Notice</a>
     <a href="contactus.html" class="btn"><i class="fas fa-envelope"></i> Contact</a>
   </div>
@@ -773,7 +825,7 @@
 
   <!-- Announcement -->
   <div class="D1">
-    <p><b class="a">Announcement:--</b> Admission Open For Session July 2025-2026 <b class="b"></b></p>
+    <p><b class="a">Announcement:--</b> New Placement Programme Starts From <b class="b">96th February</b></p>
   </div>
 
   <!-- About Section -->
@@ -945,6 +997,45 @@ Vocational Education and Skill Development</a></li>
     </div>
   </section>
 
+<!--content for SEO-->
+<div id="seo-footer">
+  <h2>Welcome to <b>Datapro Aisect Balurghat</b></h2>
+  <p><b>Datapro Aisect Balurghat</b> is one of the most trusted and certified IT and skill development training institutes in Balurghat. Whether you're looking to upskill in computers, accounting, or communication, <strong>Datapro Aisect Balurghat</strong> offers career-oriented programs with real-world value.</p>
+
+  <h3>Why Choose Datapro Aisect Balurghat?</h3>
+  <ul>
+    <li>ISO Certified & Government Approved</li>
+    <li>100% Practical Training & Hands-on Labs</li>
+    <li>Affordable Fees & Flexible Batches</li>
+    <li>Placement Support for Every Student</li>
+    <li>Experienced Trainers & Modern Infrastructure</li>
+  </ul>
+
+  <h3>Our Top Courses</h3>
+  <ul>
+    <li>Diploma in Computer Applications (DCA)</li>
+    <li>Advanced Tally with GST & Excel</li>
+    <li>Web Design & Development</li>
+    <li>Spoken English & Soft Skills</li>
+  </ul>
+
+  <h4>🎥 Watch Our Center Tour</h4>
+  <video controls poster="datapro-aisect-balurghat-campus.webp">
+    <source src="cvruvlog.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+
+  <h4>🔗 Explore More:</h4>
+  <ul>
+    <li><a href="/courses.html">Course List</a></li>
+    <li><a href="/admission.html">Apply for Admission</a></li>
+    <li><a href="/placement.html">Placement Assistance</a></li>
+    <li><a href="/about.html">About Datapro Aisect Balurghat</a></li>
+    <li><a href="/contact.html">Contact Our Team</a></li>
+  </ul>
+</div>
+
   <!-- Footer -->
   <footer>
     © All Rights Reserved 2025
@@ -975,5 +1066,30 @@ Vocational Education and Skill Development</a></li>
 
     document.addEventListener("DOMContentLoaded", showSlides);
   </script>
+
+  <title>Courses & Training at Datapro Aisect Balurghat | ISO Certified Institute</title>
+<meta name="description" content="Datapro Aisect Balurghat offers certified courses in IT, English, and accounting with 100% practical training and placement assistance. Join us today!">
+<link rel="canonical" href="https://www.yourdomain.com/datapro-aisect-balurghat" />
+
+<!-- ✅ Schema Markup -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "EducationalOrganization",
+  "name": "Datapro Aisect Balurghat",
+  "url": "https://www.yourdomain.com/datapro-aisect-balurghat",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Balurghat",
+    "addressRegion": "West Bengal",
+    "addressCountry": "India"
+  },
+  "sameAs": [
+    "https://www.facebook.com/dataproaisectbalurghat",
+    "https://www.instagram.com/dataproaisectbalurghat"
+  ]
+}
+</script>
+
 </body>
 </html>
