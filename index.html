@@ -4,19 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Datapro - Aisect - Balurghat</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" href="enquiry_form.css">
+  <link rel="stylesheet" href="enquiry_form.css">
+  
   <style>
 
-    /* code for scroll button*/
+    /* code for scroll Arrow button*/
     #scrollTopBtn {
       position: fixed;
       bottom: 30px;
       right: 30px;
       z-index: 99;
-      background-color: #1e90ff;
-      color: white;
+      background-color: #0051ff;
+      color: rgb(255, 255, 255);
       border: none;
-      padding: 12px 16px;
+      padding: 12px 17px;
       border-radius: 50%;
       font-size: 18px;
       cursor: pointer;
@@ -283,7 +285,6 @@
       width: 100%;
       max-width: 900px;
       height:400px;
-      object-fit: ;
       border-radius: 10px;
       box-shadow: 0 6px 15px rgba(0,0,0,0.1);
       margin-bottom: 20px;
@@ -950,8 +951,86 @@
     <a href="syllabus.html" class="btn"><i class="fas fa-list"></i> Syllabus</a>
     <a href="about us.html" class="btn"><i class="fa fa-info-circle" aria-hidden="true"></i> About Us</a>
     <a href="NOTICE.html" class="btn"><i class="fa fa-object-group" aria-hidden="true"></i> Notice</a>
-    <a href="contactus.html" class="btn"><i class="fas fa-envelope"></i> Contact</a>
+    <a href="contactus.html" class="btn"><i class="fas fa-envelope"></i> Contact Us</a>
+    <a href="#enquiryModal" class="btn"><i class="fas fa-envelope"></i> Enquiry Form</a>
   </div>
+
+
+  <!-----------code for Enquiry form --------------------->
+
+  <div id="enquiryModal" class="modal">
+  <div class="modal-content">
+    <a href="#" class="close">&times;</a>
+    <h2>Enquiry Form</h2>
+    <form action="https://api.web3forms.com/submit" method="POST">
+
+      <input type="hidden" name="access_key" value="36c14bcb-62a0-4abd-89b6-500c44f036c5">
+
+      <div class="form-group">
+        <label>First name</label>
+        <input type="text" name="first_name" placeholder="Your name" required>
+      </div>
+
+      <div class="form-group">
+        <label>Last name</label>
+        <input type="text" name="last_name" placeholder="Your name" required>
+      </div>
+
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" name="email" placeholder="Your email" required>
+      </div>
+
+      <div class="form-group">
+        <label>Mobile No.</label>
+        <input type="tel" name="phone" placeholder="Your phone number" required>
+      </div>
+
+      <div class="form-group">
+        <label>State</label>
+        <select id="stateSelect" name="state" required>
+          <option value="">Select State</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>City</label>
+        <select id="citySelect" name="city" required>
+          <option value="">Select City</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Program Type</label>
+        <select name="program_type" required>
+          <option>Select Program Type</option>
+          <option>Diploma</option>
+          <option>Undergraduate</option>
+          <option>Postgraduate</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Programme</label>
+        <select name="programme" required>
+          <option>Select Programme</option>
+          <option>BCA</option>
+          <option>BBA</option>
+          <option>MBA</option>
+          <option>MCA</option>
+          <option>B.Com</option>
+          <option>M.Com</option>
+        </select>
+      </div>
+
+      <div style="flex: 1 1 100%;">
+        <button type="submit">Submit</button>
+      </div>
+
+    </form>
+  </div>
+</div>
+
 
   <!-- Slideshow -->
   <div id="gallery" class="slideshow-container">
@@ -979,7 +1058,7 @@
 
   <!-- Announcement -->
   <div class="D1">
-    <p><b class="a"></b> New Placement Programme Starts From <b class="b">96th February</b></p>
+    <p><b class="a"></b> New Notification <b class="b">Coming Soon</b></p>
   </div>
 
   <!-- About Section -->
@@ -1244,8 +1323,8 @@ Vocational Education and Skill Development</a></li>
 
   <!-- Footer -->
   <footer>
-    © All Rights Reserved 2027
-    <center>Degined And Developed By <b>K</b></center>
+    ©️All Rights Reserved 2027
+    <center>Developed And Degined By <b>K</b></center>
   </footer>
 
 
@@ -1375,5 +1454,6 @@ Vocational Education and Skill Development</a></li>
     };
   </script>
 
+<script src="enquirt_form.js"></script>
 </body>
 </html>
